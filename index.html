@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIVANCE — Advancing Intelligence, Empowering Nature</title>
+  <meta name="description" content="AIVANCE is a Singapore-based AI company building intelligent agriculture robotics, UAV/edge sensing & hazard early-warning, and AI for discovery (protein de novo design)." />
+  <meta property="og:title" content="AIVANCE" />
+  <meta property="og:description" content="Intelligent Agriculture × AI for Discovery" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/social-card.png" />
+  <meta name="theme-color" content="#0a84ff" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0e13;
+      --bg-soft:#0f131a;
+      --text:#e6f0ff;
+      --muted:#a7b6d9;
+      --brand:#0a84ff;
+      --brand-2:#19c37d;
+      --accent:#78e6ff;
+      --card:#0d1219;
+      --border:rgba(255,255,255,.08);
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{background:linear-gradient(180deg,#080b10 0%,#0b0e13 100%);color:var(--text);margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .nav{position:sticky;top:0;z-index:40;background:rgba(8,11,16,.55);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
+    .brand-logo{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:radial-gradient(120% 120% at 0% 0%,#19c37d 0%,#0a84ff 60%,#0a2cff 100%);box-shadow:0 6px 18px rgba(10,132,255,.35)}
+    .brand-logo svg{width:20px;height:20px;fill:#fff}
+    .menu{display:flex;gap:20px}
+    .menu a{color:var(--muted);font-weight:600;font-size:.95rem;padding:10px 12px;border-radius:12px}
+    .menu a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+    .cta{background:linear-gradient(135deg,var(--brand),#5aa8ff);color:#fff;padding:10px 16px;border-radius:14px;font-weight:700;box-shadow:0 8px 22px rgba(10,132,255,.35)}
+
+    .hero{padding:72px 0 48px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+    .glow{position:absolute;inset:auto -15% -40% -15%;height:420px;background:radial-gradient(60% 60% at 50% 0%,rgba(10,132,255,.25),rgba(25,195,125,.15) 45%,transparent 70%);filter:blur(36px);opacity:.9;pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:36px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-weight:600;background:rgba(255,255,255,.03)}
+    .title{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.05;margin:16px 0 12px;font-weight:800}
+    .title .grad{background:linear-gradient(90deg,#7de2ff 0%,#0a84ff 50%,#19c37d 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:1.15rem;color:var(--muted);max-width:700px}
+    .hero-actions{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid var(--border);background:#0b1118}
+    .btn svg{width:18px;height:18px}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),#5aa8ff);border:none;color:#fff;font-weight:800}
+    .btn-ghost{color:var(--text)}
+
+    .hero-card{background:linear-gradient(180deg,#0d1219,#0b0f16);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;background:rgba(10,132,255,.1);color:#9fc9ff;border:1px solid rgba(10,132,255,.25);font-weight:700;font-size:.8rem;margin:4px 6px 0 0}
+
+    .section{padding:72px 0;border-bottom:1px solid var(--border)}
+    .section h2{font-size:clamp(1.6rem,2.4vw,2.2rem);margin:0 0 12px}
+    .sub{color:var(--muted);margin:0 0 24px}
+
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .card{background:linear-gradient(180deg,var(--card),#0b0f16);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .card h3{margin:4px 0 8px}
+    .pill{display:inline-flex;gap:8px;align-items:center;font-size:.8rem;color:var(--muted);border:1px dashed var(--border);padding:8px 10px;border-radius:999px}
+    .list{margin:10px 0 0;padding:0 0 0 16px;color:var(--muted)}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .stat{background:linear-gradient(180deg,var(--card),#0b0f16);border:1px solid var(--border);border-radius:var(--radius);padding:22px;text-align:center}
+    .stat h4{font-size:2rem;margin:0}
+    .stat p{margin:6px 0 0;color:var(--muted)}
+
+    .footer{padding:38px 0;color:var(--muted)}
+    .footer small{display:block;margin-top:8px}
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .menu{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="AIVANCE Home">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" aria-label="A icon"><path d="M12 2c.5 0 .96.28 1.2.73l8 15a1.35 1.35 0 0 1-1.2 1.97h-3.1a1.2 1.2 0 0 1-1.08-.67L12 9.1 8.18 19.03A1.2 1.2 0 0 1 7.1 19.7H4a1.35 1.35 0 0 1-1.2-1.97l8-15A1.36 1.36 0 0 1 12 2z"/></svg>
+        </span>
+        <span>AIVANCE</span>
+      </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="#solutions">Solutions</a>
+        <a href="#technology">Technology</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="cta" href="#contact">Talk to Us</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Singapore • AI for Nature & Discovery</span>
+          <h1 class="title">Advancing <span class="grad">Intelligence</span>, Empowering <span class="grad">Nature</span></h1>
+          <p class="lead">We build AI systems that sense the physical world and design the biological one: <b>intelligent agriculture robotics, UAV hazard early‑warning</b>, and <b>AI for discovery</b> including <b>protein de novo design</b>.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#solutions" aria-label="Explore solutions">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l4 9-4 9 9-4 9 4-4-9 4-9-9 4-9-4z"/></svg>
+              Explore Solutions
+            </a>
+            <a class="btn btn-ghost" href="#contact" aria-label="Get in touch">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              Get in Touch
+            </a>
+          </div>
+          <div style="margin-top:18px">
+            <span class="chip">UAV/Edge Sensing</span>
+            <span class="chip">Radar & Hail Nowcasting</span>
+            <span class="chip">Protein Design</span>
+            <span class="chip">Efficient AI</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Highlights">
+          <h3 style="margin:6px 0 10px">What we deliver</h3>
+          <ul class="list">
+            <li>Field‑ready <b>AI robots & drone swarms</b> for orchards and farms.</li>
+            <li><b>Multi‑sensor early‑warning</b> (radar, lidar, satellite, IoT) with actionable alerts.</li>
+            <li><b>AI for Discovery</b>: protein de novo design, generative molecular pipelines.</li>
+            <li>Privacy‑preserving and <b>efficient AI</b> for edge & low‑resource scenarios.</li>
+          </ul>
+          <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+            <span class="pill">TRL 6–8 pilots</span>
+            <span class="pill">Academic–Industry Co‑dev</span>
+            <span class="pill">APAC • EU ready</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="solutions" class="section">
+      <div class="container">
+        <h2>Solutions</h2>
+        <p class="sub">Two product lines united by a single mission: measurable impact from fields to labs.</p>
+        <div class="cards">
+          <article class="card" aria-labelledby="agri-title">
+            <div style="display:flex;align-items:center;gap:10px">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22h20"/><path d="M8 22V12l-2 2-2-2v10"/><path d="M12 22V4l3 3 3-3v18"/></svg>
+              <h3 id="agri-title" style="margin:0">Agro Intelligence</h3>
+            </div>
+            <p class="sub">Robotics & UAV platforms with edge AI for precision farming and climate resilience.</p>
+            <ul class="list">
+              <li>Drone‑based canopy analytics, pest/health detection, yield mapping</li>
+              <li>Radar‑assisted hail/storm <b>nowcasting</b> & micro‑climate alerts</li>
+              <li>On‑device models for low‑connectivity environments</li>
+              <li>Interoperability with existing farm ERPs & sensors (LoRa/4G/5G)</li>
+            </ul>
+          </article>
+          <article class="card" aria-labelledby="bio-title">
+            <div style="display:flex;align-items:center;gap:10px">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2s4 4 0 8 0 8 0 8"/><path d="M12 2s-4 4 0 8 0 8 0 8"/></svg>
+              <h3 id="bio-title" style="margin:0">AI for Discovery</h3>
+            </div>
+            <p class="sub">Computational design pipelines for proteins and molecules.</p>
+            <ul class="list">
+              <li>Protein <b>de novo</b> design, conditional sequence generation</li>
+              <li>Property‑guided molecular generation (HOMO‑LUMO, SA, MW, dipole)</li>
+              <li>Workflow orchestration for screening, docking, and validation</li>
+              <li>Secure compute: federated learning / dataset condensation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="technology" class="section">
+      <div class="container">
+        <h2>Technology Stack</h2>
+        <p class="sub">From edge sensors to generative models.</p>
+        <div class="grid-3">
+          <div class="stat">
+            <h4>Edge + Cloud</h4>
+            <p>ROS2 • Nvidia Jetson • ONNX • Kubernetes</p>
+          </div>
+          <div class="stat">
+            <h4>Models</h4>
+            <p>ViT • SAM • LLM‑Agents • Diffusion • GNNs</p>
+          </div>
+          <div class="stat">
+            <h4>Bio‑AI</h4>
+            <p>ProteinMPNN • RFdiffusion • Docking & MD</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="container">
+        <h2>Case Studies</h2>
+        <p class="sub">Sample projects (NDA‑friendly outlines).</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Orchard Hail Early‑Warning</h3>
+            <p class="sub">Radar + satellite + on‑field sensors. Improved alert lead‑time by 12–20 minutes at block scale.</p>
+            <ul class="list">
+              <li>Multi‑modal fusion and uncertainty‑aware nowcasting</li>
+              <li>Operator console with geofenced tasking for UAV patrols</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Protein Binder Generation</h3>
+            <p class="sub">Conditional sequence/design loop targeting specified epitopes.</p>
+            <ul class="list">
+              <li>Constraint‑guided sampling (SA, MW, gap, dipole)</li>
+              <li>Docking triage and rapid wet‑lab shortlist</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="sub">Let’s co‑develop pilots in APAC and beyond.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Talk to the team</h3>
+            <p>Email: <a href="mailto:hello@aivance.ai">yanmingtop@yahoo.com</a> • Singapore</p>
+            <form id="contact-form" style="display:grid;gap:10px;margin-top:8px" onsubmit="sendMail(event)">
+              <label>
+                <span class="sub">Your email</span>
+                <input required name="email" type="email" placeholder="you@company.com" style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:#0b1118;color:var(--text)" />
+              </label>
+              <label>
+                <span class="sub">Message</span>
+                <textarea required name="message" rows="4" placeholder="Tell us about your use case…" style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:#0b1118;color:var(--text)"></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Send</button>
+              <small id="status" class="sub" role="status" aria-live="polite"></small>
+            </form>
+          </div>
+          <div class="card">
+            <h3>Company</h3>
+            <ul class="list">
+              <li>AIVANCE Pte. Ltd. (SG)</li>
+              <li>Focus: Agro Intelligence • AI for Discovery</li>
+              <li>Engagement: PoC → Pilot → Scale</li>
+              <li>Partners: academia × industry</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span class="brand-logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2c.5 0 .96.28 1.2.73l8 15a1.35 1.35 0 0 1-1.2 1.97h-3.1a1.2 1.2 0 0 1-1.08-.67L12 9.1 8.18 19.03A1.2 1.2 0 0 1 7.1 19.7H4a1.35 1.35 0 0 1-1.2-1.97l8-15A1.36 1.36 0 0 1 12 2z"/></svg></span>
+        <span style="color:var(--muted)">© <span id="year"></span> AIVANCE. All rights reserved.</span>
+      </div>
+      <div style="display:flex;gap:10px;color:var(--muted)">
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function sendMail(e){
+      e.preventDefault();
+      const form=e.target;
+      const email=form.email.value.trim();
+      const msg=form.message.value.trim();
+      const subject=encodeURIComponent("AIVANCE Website Inquiry");
+      const body=encodeURIComponent(`From: ${email}%0D%0A%0D%0A${msg}`);
+      const link=`mailto:hello@aivance.ai?subject=${subject}&body=${body}`;
+      window.location.href=link;
+      const status=document.getElementById('status');
+      status.textContent='Opening your email client…';
+      form.reset();
+    }
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
